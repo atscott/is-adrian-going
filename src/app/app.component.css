@@ -1,0 +1,10 @@
+.center {
+  justify-content: center;
+  display: flex;
+  width: 100%;
+}
+
+.middle-column {
+  max-width: 600px;
+  margin: auto;
+}
