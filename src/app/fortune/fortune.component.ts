@@ -7,7 +7,6 @@ import { Router, ActivatedRoute } from '@angular/router';
   styleUrls: ['./fortune.component.css']
 })
 export class FortuneComponent {
-  title = 'Is Adrian Going?';
   image: string;
   allImages = ['1000', 'bus', 'carfixed', 'down', 'dts', 'earliest', 'friend', 'harriet', 'inLA', 'kravmaga', 'nexttime', 'notbackintime', 'notsure', 'ohyah', 'outoftown', 'softmaybe', 'vivek', 'wenthome', 'whoknows', 'wildride', 'wrong'];
 
@@ -15,7 +14,7 @@ export class FortuneComponent {
 
     route.queryParams.subscribe((params) => {
       const imageName = params['fortune'];
-      if (this.allImages.includes(imageName)) {
+      if (this.allImages.indexOf(imageName) !== -1) {
         this.image = `url(/assets/images/${imageName}.png)`;
       } else {
         this.randomImage();
