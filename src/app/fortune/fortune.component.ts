@@ -37,6 +37,7 @@ export class FortuneComponent {
     const randomIndex = Math.floor((Math.random() * this.allImages.length));
     const imageName = this.allImages[randomIndex];
     this.navigateToImage(imageName);
+    this.image = `url(/assets/images/${imageName}.png)`;
   }
 
   navigateToImage(imageName) {

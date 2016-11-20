@@ -8,3 +8,7 @@
   max-width: 600px;
   margin: auto;
 }
+
+md-toolbar {
+  margin-bottom: 8px;
+}
