@@ -1,10 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, trigger, style, transition, animate, keyframes } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'fortune',
   templateUrl: './fortune.component.html',
-  styleUrls: ['./fortune.component.css']
+  styleUrls: ['./fortune.component.css'],
+  animations: [
+    trigger('imageAnimation', [
+      transition('* => *',
+        animate(1000, keyframes([
+          style({transform: 'rotate(0deg)'}),
+          style({transform: 'rotate(1000deg)'}),
+          style({transform: 'rotate(0deg)'}),
+        ]))
+      )
+    ])
+  ]
 })
 export class FortuneComponent {
   image: string;
