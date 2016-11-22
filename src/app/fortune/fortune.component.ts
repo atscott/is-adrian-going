@@ -1,5 +1,6 @@
 import { Component, OnInit, trigger, style, transition, animate, keyframes } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { fortunes } from './fortunes.ts';
 
 @Component({
   selector: 'fortune',
@@ -19,7 +20,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class FortuneComponent {
   image: string;
-  allImages = ['1000', 'bus', 'carfixed', 'down', 'dts', 'earliest', 'friend', 'harriet', 'inLA', 'kravmaga', 'nexttime', 'notbackintime', 'notsure', 'ohyah', 'outoftown', 'softmaybe', 'vivek', 'wenthome', 'whoknows', 'wildride', 'wrong'];
+  allImages = fortunes;
 
   constructor(private router: Router, route: ActivatedRoute) {
 
