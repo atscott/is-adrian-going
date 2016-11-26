@@ -27,7 +27,7 @@ export class FortuneComponent {
     route.queryParams.subscribe((params) => {
       const imageName = params['fortune'];
       if (this.allImages.indexOf(imageName) !== -1) {
-        this.image = `url(/assets/images/${imageName}.png)`;
+        this.image = `url(/assets/images/${imageName})`;
       } else {
         this.randomImage();
       }
@@ -38,7 +38,7 @@ export class FortuneComponent {
     const randomIndex = Math.floor((Math.random() * this.allImages.length));
     const imageName = this.allImages[randomIndex];
     this.navigateToImage(imageName);
-    this.image = `url(/assets/images/${imageName}.png)`;
+    this.image = `url(/assets/images/${imageName})`;
   }
 
   navigateToImage(imageName) {

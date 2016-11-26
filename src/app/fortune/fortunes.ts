@@ -19,9 +19,11 @@ export const fortunes = [
   'outoftown.png',
   'softmaybe.png',
   'solidmaybe.png',
+  'tourist.png',
   'vivek.png',
   'wenthome.png',
   'whoknows.png',
   'wildride.png',
   'wrong.png',
+  'yea-fuck-it.png',
 ];
