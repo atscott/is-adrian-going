@@ -1,19 +1,20 @@
-/* tslint:disable:no-unused-variable */
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-import { By } from '@angular/platform-browser';
-import { DebugElement } from '@angular/core';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
+import {MaterialModule} from '@angular/material';
+import {RouterTestingModule} from '@angular/router/testing';
 
-import { FortuneComponent } from './fortune.component';
+import {FortuneComponent} from './fortune.component';
 
 describe('FortuneComponent', () => {
   let component: FortuneComponent;
   let fixture: ComponentFixture<FortuneComponent>;
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ FortuneComponent ]
-    })
-    .compileComponents();
+    TestBed
+        .configureTestingModule({
+          declarations: [FortuneComponent],
+          imports: [MaterialModule.forRoot(), RouterTestingModule]
+        })
+        .compileComponents();
   }));
 
   beforeEach(() => {

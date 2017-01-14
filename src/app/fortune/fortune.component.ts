@@ -1,29 +1,25 @@
-import { Component, OnInit, trigger, style, transition, animate, keyframes } from '@angular/core';
-import { Router, ActivatedRoute } from '@angular/router';
-import { fortunes } from './fortunes.ts';
+import {animate, Component, keyframes, style, transition, trigger} from '@angular/core';
+import {ActivatedRoute, Router} from '@angular/router';
+
+import {fortunes} from './fortunes';
 
 @Component({
-  selector: 'fortune',
+  selector: 'app-fortune',
   templateUrl: './fortune.component.html',
   styleUrls: ['./fortune.component.css'],
-  animations: [
-    trigger('imageAnimation', [
-      transition('* => *',
-        animate(1000, keyframes([
-          style({transform: 'rotate(0deg)'}),
-          style({transform: 'rotate(1000deg)'}),
-          style({transform: 'rotate(0deg)'}),
-        ]))
-      )
-    ])
-  ]
+  animations: [trigger(
+      'imageAnimation',
+      [transition('* => *', animate(1000, keyframes([
+                                      style({transform: 'rotate(0deg)'}),
+                                      style({transform: 'rotate(1000deg)'}),
+                                      style({transform: 'rotate(0deg)'}),
+                                    ])))])]
 })
 export class FortuneComponent {
   image: string;
   allImages = fortunes;
 
   constructor(private router: Router, route: ActivatedRoute) {
-
     route.queryParams.subscribe((params) => {
       const imageName = params['fortune'];
       if (this.allImages.indexOf(imageName) !== -1) {
