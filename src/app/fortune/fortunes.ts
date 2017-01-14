@@ -6,6 +6,7 @@ export const fortunes = [
   '1000.png',
   'already-have-plans.png',
   'bus.png',
+  'cantgo.png',
   'carfixed.png',
   'could-be.png',
   'down.png',
