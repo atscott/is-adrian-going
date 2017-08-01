@@ -2,7 +2,7 @@
   "name": "Is Adrian Going?",
   "short_name": "Adrian?",
   "display": "standalone",
-  "start_url": ".",
+  "start_url": "/index.html",
   "background_color": "#673ab7",
   "theme_color": "#673ab7",
   "lang": "en-US",
