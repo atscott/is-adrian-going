@@ -17,27 +17,32 @@ import {fortunes} from './fortunes';
 })
 export class FortuneComponent {
   image: string;
+  imageName: string;
+  host: string;
   allImages = fortunes;
 
   constructor(private router: Router, route: ActivatedRoute) {
+    this.host = window.location.host;
+    this.randomImage();
+
     route.queryParams.subscribe((params) => {
-      const imageName = params['fortune'];
-      if (this.allImages.indexOf(imageName) !== -1) {
-        this.image = `url(/assets/images/${imageName})`;
+      this.imageName = params['fortune'];
+      if (this.allImages.indexOf(this.imageName) !== -1) {
+        this.image = `url(/assets/images/${this.imageName})`;
       } else {
-        this.randomImage();
+        this.newFortune();
       }
     });
   }
 
-  randomImage() {
-    const randomIndex = Math.floor((Math.random() * this.allImages.length));
-    const imageName = this.allImages[randomIndex];
-    this.navigateToImage(imageName);
-    this.image = `url(/assets/images/${imageName})`;
+  newFortune() {
+    this.router.navigate([''], {queryParams: {}});
+    this.randomImage();
   }
 
-  navigateToImage(imageName) {
-    this.router.navigate([''], {queryParams: {'fortune': imageName}});
+  private randomImage() {
+    const randomIndex = Math.floor((Math.random() * this.allImages.length));
+    this.imageName = this.allImages[randomIndex];
+    this.image = `url(/assets/images/${this.imageName})`;
   }
 }

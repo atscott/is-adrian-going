@@ -3,8 +3,11 @@
     <div [@imageAnimation]="image" class="fortune-image" [style.background-image]="image"></div>
   </md-card-content>
   <md-card-actions>
-    <button md-button md-raised-button color="primary" (click)="randomImage()">
+    <button md-button md-raised-button color="primary" (click)="newFortune()">
       New Fortune
     </button>
   </md-card-actions>
 </md-card>
+<small>
+  perma link: <a [routerLink]="['/']" [queryParams]="{fortune: imageName}">{{host}}/?fortune={{imageName}}</a>
+</small>
