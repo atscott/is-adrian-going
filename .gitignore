@@ -36,3 +36,6 @@ Thumbs.db
 
 #Firebase
 .firebaserc
+
+#vim swap files
+*.swp

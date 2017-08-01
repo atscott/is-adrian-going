@@ -1,6 +1,7 @@
 import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 import {MaterialModule} from '@angular/material';
 import {RouterTestingModule} from '@angular/router/testing';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {FortuneComponent} from './fortune.component';
 
@@ -12,7 +13,7 @@ describe('FortuneComponent', () => {
     TestBed
         .configureTestingModule({
           declarations: [FortuneComponent],
-          imports: [MaterialModule, RouterTestingModule]
+          imports: [MaterialModule, RouterTestingModule, BrowserAnimationsModule]
         })
         .compileComponents();
   }));
