@@ -2,7 +2,6 @@
 // THIS IS A GENERATED FILE. USE THE COMMAND 'grunt gen_fortunes' TO REGENERATE
 
 export const fortunes = [
-  '.DS_Store',
   '1000.png',
   'already-have-plans.png',
   'bus.png',

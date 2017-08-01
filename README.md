@@ -11,6 +11,10 @@ This project was generated with
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app
 will automatically reload if you change any of the source files.
 
+If you want to test the service worker, you'll need to instead run with
+`npm run static-serve`. This builds the production sources, regenerates the
+service-worker with sw-precache, and serves from the dist/.
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can
@@ -18,8 +22,9 @@ also use `ng generate directive/pipe/service/class`.
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the
-`dist/` directory. Use the `-prod` flag for a production build.
+Run `grunt build` to build the project. The build artifacts will be stored in the
+`dist/` directory. You could do `ng build` instead, but it won't regenerate the
+fortunes list or the service-worker.js file.
 
 ## Running unit tests
 
