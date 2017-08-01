@@ -12,7 +12,7 @@ describe('FortuneComponent', () => {
     TestBed
         .configureTestingModule({
           declarations: [FortuneComponent],
-          imports: [MaterialModule.forRoot(), RouterTestingModule]
+          imports: [MaterialModule, RouterTestingModule]
         })
         .compileComponents();
   }));

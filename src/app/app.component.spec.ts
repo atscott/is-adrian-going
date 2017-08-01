@@ -8,7 +8,7 @@ import {AppModule} from './app.module';
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule, MaterialModule.forRoot(), RouterTestingModule],
+      imports: [AppModule, MaterialModule, RouterTestingModule],
     });
   });
 
