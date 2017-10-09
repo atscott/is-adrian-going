@@ -12,6 +12,7 @@ export const fortunes = [
   'dts.png',
   'earliest.png',
   'friend.png',
+  'friendsvisiting.png',
   'harriet.png',
   'inLA.png',
   'kravmaga.png',
