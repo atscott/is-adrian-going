@@ -1,13 +1,13 @@
-<md-card>
-  <md-card-content class="center">
+<mat-card>
+  <mat-card-content class="center">
     <div [@imageAnimation]="image" class="fortune-image" [style.background-image]="image"></div>
-  </md-card-content>
-  <md-card-actions>
-    <button md-button md-raised-button color="primary" (click)="newFortune()">
+  </mat-card-content>
+  <mat-card-actions>
+    <button mat-button mat-raised-button color="primary" (click)="newFortune()">
       New Fortune
     </button>
-  </md-card-actions>
-</md-card>
+  </mat-card-actions>
+</mat-card>
 <small>
   perma link: <a [routerLink]="['/']" [queryParams]="{fortune: imageName}">{{host}}/?fortune={{imageName}}</a>
 </small>

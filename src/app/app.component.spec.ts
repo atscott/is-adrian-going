@@ -1,5 +1,4 @@
 import {async, TestBed} from '@angular/core/testing';
-import {MaterialModule} from '@angular/material';
 import {RouterTestingModule} from '@angular/router/testing';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -9,7 +8,7 @@ import {AppModule} from './app.module';
 describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      imports: [AppModule, MaterialModule, RouterTestingModule, BrowserAnimationsModule],
+      imports: [AppModule, RouterTestingModule, BrowserAnimationsModule],
     });
   });
 
