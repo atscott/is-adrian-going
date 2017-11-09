@@ -28,7 +28,7 @@ describe('AppComponent', () => {
        let fixture = TestBed.createComponent(AppComponent);
        fixture.detectChanges();
        let compiled = fixture.debugElement.nativeElement;
-       expect(compiled.querySelector('md-toolbar span').textContent)
+       expect(compiled.querySelector('mat-toolbar span').textContent)
            .toContain('Is Adrian Going?');
      }));
 });
