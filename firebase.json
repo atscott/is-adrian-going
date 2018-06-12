@@ -10,5 +10,12 @@
         "destination": "/index.html"
       }
     ]
+  },
+  {
+    "source": "service-worker.js",
+    "headers": [
+      "key": "Cache-control",
+      "value": "max-age=0"
+    ]
   }
 }
