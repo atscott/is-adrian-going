@@ -10,7 +10,6 @@
     "testci": "./node_modules/.bin/karma start --single-run --browsers ChromeHeadless",
     "pree2e": "webdriver-manager update",
     "e2e": "protractor",
-    "sw": "sw-precache --root=dist --config=sw-precache-config.js",
     "static-serve": "grunt build && cd dist && live-server --port=4200 --host=localhost --entry-file=/index.html"
   },
   "private": true,
@@ -25,7 +24,9 @@
     "@angular/material": "^6.4.1",
     "@angular/platform-browser": "^6.0.9",
     "@angular/platform-browser-dynamic": "^6.0.9",
+    "@angular/pwa": "^0.6.8",
     "@angular/router": "^6.0.9",
+    "@angular/service-worker": "^6.0.9",
     "core-js": "^2.5.7",
     "rxjs": "^6.2.2",
     "ts-helpers": "^1.1.1",
@@ -53,7 +54,6 @@
     "karma-jasmine": "^1.1.2",
     "karma-jasmine-html-reporter": "^1.2.0",
     "protractor": "^5.4.0",
-    "sw-precache": "^5.2.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.11.0",
     "typescript": "^2.7.2"

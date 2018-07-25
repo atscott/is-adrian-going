@@ -8,6 +8,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 import {AppComponent} from './app.component';
 import {FortuneComponent} from './fortune/fortune.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const routes: Routes = [{path: '', component: FortuneComponent}];
 
@@ -20,6 +22,7 @@ const routes: Routes = [{path: '', component: FortuneComponent}];
     HttpModule,
     MaterialModule,
     RouterModule.forRoot(routes),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
   ],
   bootstrap: [AppComponent]
 })

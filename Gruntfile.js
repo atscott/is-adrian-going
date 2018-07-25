@@ -3,7 +3,6 @@ module.exports = (grunt) => {
     pkg: grunt.file.readJSON('package.json'),
     exec: {
       generate_fortunes: 'node --use-strict src/util/generate_fortunes_list.js',
-      sw: 'npm run sw',
       build: {command: 'ng build --prod', options: {maxBuffer: 1024*1000}}
     }
   });

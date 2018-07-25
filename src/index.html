@@ -21,19 +21,11 @@
   <link rel="apple-touch-icon" href="/assets/manifest/icon-144x144.png" sizes="144x144">
   <link rel="apple-touch-icon" href="/assets/manifest/icon-192x192.png" sizes="192x192">
   <link rel="apple-touch-icon" href="/assets/manifest/icon-512x512.png" sizes="512x512">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#1976d2">
 </head>
 
 <body>
   <app-root role="main">Loading...</app-root>
 </body>
-<script>
-  if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-      console.log('Service Worker registered');
-    }).catch(function(err) {
-      console.log('Service Worker registration failed: ', err);
-    });
-  }
-</script>
-
 </html>
