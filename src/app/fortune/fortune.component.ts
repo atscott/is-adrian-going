@@ -1,5 +1,6 @@
-import {animate, Component, keyframes, style, transition, trigger} from '@angular/core';
+import {Component} from '@angular/core';
 import {ActivatedRoute, Router} from '@angular/router';
+import {animate, keyframes, style, transition, trigger} from '@angular/animations';
 
 import {fortunes} from './fortunes';
 
@@ -8,12 +9,12 @@ import {fortunes} from './fortunes';
   templateUrl: './fortune.component.html',
   styleUrls: ['./fortune.component.css'],
   animations: [trigger(
-      'imageAnimation',
-      [transition('* => *', animate(1000, keyframes([
-                                      style({transform: 'rotate(0deg)'}),
-                                      style({transform: 'rotate(1000deg)'}),
-                                      style({transform: 'rotate(0deg)'}),
-                                    ])))])]
+    'imageAnimation',
+    [transition('* => *', animate(1000, keyframes([
+      style({transform: 'rotate(0deg)'}),
+      style({transform: 'rotate(1000deg)'}),
+      style({transform: 'rotate(0deg)'}),
+    ])))])]
 })
 export class FortuneComponent {
   image: string;
