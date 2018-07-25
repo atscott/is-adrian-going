@@ -16,7 +16,7 @@ before_script:
   - sh -e /etc/init.d/xvfb start
 
 script:
-  - ng test
+  - ng test --watch=false
   - npm run lint
   - grunt build
 
