@@ -39,7 +39,7 @@
     "@angular/language-service": "^6.0.9",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.2",
-    "@types/node": "~10.5.3",
+    "@types/node": "~13.11.0",
     "codelyzer": "~4.4.2",
     "file-system": "^2.2.2",
     "grunt": "^1.0.3",
