@@ -1,6 +1,6 @@
 import {NgModule} from '@angular/core';
 import {FormsModule} from '@angular/forms';
-import {HttpModule} from '@angular/http';
+import {HttpClientModule} from '@angular/common/http';
 import {MaterialModule} from './material/material.module';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule, Routes} from '@angular/router';
@@ -19,7 +19,7 @@ const routes: Routes = [{path: '', component: FortuneComponent}];
     BrowserAnimationsModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     MaterialModule,
     RouterModule.forRoot(routes),
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
