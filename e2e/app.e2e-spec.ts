@@ -1,6 +1,6 @@
 import { IsAdrianGoingPage } from './app.po';
 
-describe('is-adrian-going App', function() {
+describe('is-adrian-going App', () => {
   let page: IsAdrianGoingPage;
 
   beforeEach(() => {

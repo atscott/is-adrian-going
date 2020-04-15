@@ -26,8 +26,9 @@ export class FortuneComponent {
     this.host = window.location.host;
     this.randomImage();
 
-    route.queryParams.subscribe((params) => {
-      this.imageName = params['fortune'];
+    route.queryParams.subscribe((params: {[key: string]: string}) => {
+      const fortuneKey = 'fortune';
+      this.imageName = params[fortuneKey];
       if (this.allImages.indexOf(this.imageName) !== -1) {
         this.image = `url(/assets/images/${this.imageName})`;
       } else {
