@@ -5,9 +5,10 @@ node_js: "lts/*"
 
 before_install:
  - npm install -g npm
+ - npm install -g yarn
 
 install:
-  - npm install
+  - yarn install
 
 before_script:
   - npm install -g firebase-tools
@@ -16,7 +17,7 @@ before_script:
 
 script:
   - ng test --watch=false
-  - npm run lint
+  - yarn run lint
   - grunt build
 
 after_success:
