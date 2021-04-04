@@ -3,21 +3,23 @@
     "rules": "database.rules.json"
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/is-adrian-going",
     "rewrites": [
       {
         "source": "**",
         "destination": "/index.html"
       }
     ],
-    "headers": [{
-      "source": "*",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "private, max-age=0, no-cache"
-        }
-      ]
-    }]
+    "headers": [
+      {
+        "source": "*",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "private, max-age=0, no-cache"
+          }
+        ]
+      }
+    ]
   }
 }
