@@ -16,7 +16,7 @@ before_script:
   - export DISPLAY=:99.0
 
 script:
-  - ng test --watch=false
+  - ng test --watch=false --browsers=ChromeHeadlessNoSandbox
   - yarn run lint
   - grunt build
 
